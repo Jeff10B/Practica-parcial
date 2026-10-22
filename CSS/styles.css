@@ -1,0 +1,167 @@
+:root {
+    --bg-page: #f0f2f5;
+    --bg-header: #c882cf; 
+    --bg-footer: #6a75ca; 
+    --text-color: #333;
+    --text-light: #777;
+    --font-main: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-page);
+    font-family: var(--font-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.title {
+    color: #3f51b5;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.card-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+/* --- LA TARJETA --- */
+.card {
+    background-color: white;
+    width: 340px; 
+    min-height: 480px; 
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px; 
+
+/* --- CABECERA  --- */
+.card__header {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; 
+    background-color: var(--bg-header);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%); 
+    border-radius: 10px 10px 0 0; 
+}
+
+/* --- FOTO (FLOTANTE) --- */
+.card__image-container {
+    width: 110px; 
+    height: 110px;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 4px solid white;
+    
+    position: absolute;
+    top: 60px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    
+    overflow: hidden;
+    z-index: 10; 
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* --- CUERPO --- */
+.card__body {
+    padding: 90px 25px 25px 25px; 
+    text-align: center;
+    flex-grow: 1; 
+}
+
+.card__name {
+    color: #000;
+    font-size: 1.3rem; 
+    margin-bottom: 10px;
+}
+
+.card__line {
+    width: 50px;
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 0 auto 20px auto;
+}
+
+.card__text {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6; 
+    margin-bottom: 30px;
+}
+
+.card__actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card__action-icon {
+    color: var(--bg-header);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.card__action-icon--round {
+    border: 1px solid var(--bg-header);
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.card__action-icon:hover {
+    transform: scale(1.1);
+}
+
+
+.card__footer {
+    background-color: var(--bg-footer);
+    padding: 25px 0 15px 0;
+    clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0 100%);
+    margin-top: -20px; 
+    border-radius: 0 0 10px 10px;
+}
+
+.card__social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 10px; 
+}
+
+.card__social-links a {
+    color: white;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.card__social-links a:hover {
+    opacity: 0.7;
+}}
