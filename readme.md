@@ -1,4 +1,4 @@
-# Práctica: Tarjetas de Perfil - Responsive Design
+# Práctica: Tarjetas de Perfil
 
 Hola, este es el repositorio de la práctica. El objetivo principal era crear las tarjetas de perfil que vimos en clase, aplicando los conceptos de CSS que nos pidieron.
 
